@@ -10,21 +10,21 @@ public class ExerciseFive {
         Scanner scanner = new Scanner(System.in);
         int i = scanner.nextInt();
         i = 2 * i - 1;
+        int spaceNum = 0;
+        int asteriskNum = 0;
         for (int j = 0; j < i; j++) {
             if (j > i / 2) {
-                for (int k = 0; k <= j - i / 2; k++) {
-                    System.out.print(" ");
-                }
-                for (int m = 0; m < 2 * (i - j) - 1; m++) {
-                    System.out.print("*");
-                }
+                spaceNum = j - i / 2;
+                asteriskNum = 2 * (i - j) - 1;
             } else {
-                for (int n = 0; n <= i / 2 - j; n++) {
-                    System.out.print(" ");
-                }
-                for (int h = 0; h < 2 * (j + 1) - 1; h++) {
-                    System.out.print("*");
-                }
+                spaceNum = i / 2 - j;
+                asteriskNum = 2 * (j + 1) - 1;
+            }
+            for (int k = 0; k <= spaceNum; k++) {
+                System.out.print(" ");
+            }
+            for (int m = 0; m < asteriskNum; m++) {
+                System.out.print("*");
             }
 
             System.out.println();
